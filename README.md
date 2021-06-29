@@ -25,7 +25,7 @@ http://localhost:8080/api/add?a=4&b=5
 Good request
 ```sh
 15:29 $ curl -X GET "http://localhost:8080/api/add?a=4&b=5"
-{"Success":true,"ErrCode":"200","Value":9}
+{"Success":true,"ErrCode":"","Value":9}
 ```
 Bad request
 ```sh
