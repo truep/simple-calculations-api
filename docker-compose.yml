@@ -1,0 +1,16 @@
+version: "3"
+
+networks:
+  calc-api:
+    driver: bridge
+
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - "8080:8081"
+    environment:
+      - PORT=8081
+    networks:
+      - calc-api
