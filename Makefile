@@ -12,6 +12,8 @@ build:
 .PHONY: clean
 
 test: 
+	go get -u ./...
+	go mod tidy && go mod vendor
 	go test ./... -coverprofile=coverage.out
 
 covtest: test
