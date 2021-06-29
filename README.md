@@ -32,3 +32,16 @@ Bad request
 15:30 $ curl -X GET "http://localhost:8080/api/div?a=4&b=0"
 {"Success":false,"ErrCode":"400"}
 ```
+
+
+### tests
+simple test
+
+```
+make test
+```
+
+simple covarage
+```
+make covtest
+```

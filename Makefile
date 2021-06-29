@@ -12,8 +12,10 @@ build:
 .PHONY: clean
 
 test: 
-	go test ./...
+	go test ./... -coverprofile=coverage.out
 
+covtest: test
+	go tool cover -html=coverage.out	
 clean:
 	rm -rf $(bin_path)
 
