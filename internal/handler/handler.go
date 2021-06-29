@@ -37,7 +37,7 @@ func Add(w http.ResponseWriter, r *http.Request) {
 	}
 
 	result := first + second
-	_ = render.Render(w, r, &CalcResponse{HTTPStatusCode: 200, Success: true, ErrCode: "200", Value: result})
+	_ = render.Render(w, r, &CalcResponse{HTTPStatusCode: 200, Success: true, ErrCode: "", Value: result})
 }
 
 // вычитание
@@ -50,7 +50,7 @@ func Sub(w http.ResponseWriter, r *http.Request) {
 	}
 
 	result := first - second
-	_ = render.Render(w, r, &CalcResponse{HTTPStatusCode: 200, Success: true, ErrCode: "200", Value: result})
+	_ = render.Render(w, r, &CalcResponse{HTTPStatusCode: 200, Success: true, ErrCode: "", Value: result})
 }
 
 // умножение
@@ -63,7 +63,7 @@ func Mul(w http.ResponseWriter, r *http.Request) {
 	}
 
 	result := first * second
-	_ = render.Render(w, r, &CalcResponse{HTTPStatusCode: 200, Success: true, ErrCode: "200", Value: result})
+	_ = render.Render(w, r, &CalcResponse{HTTPStatusCode: 200, Success: true, ErrCode: "", Value: result})
 }
 
 // деление
@@ -84,5 +84,5 @@ func Div(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	_ = render.Render(w, r, &CalcResponse{HTTPStatusCode: 200, Success: true, ErrCode: "200", Value: result})
+	_ = render.Render(w, r, &CalcResponse{HTTPStatusCode: 200, Success: true, ErrCode: "", Value: result})
 }
