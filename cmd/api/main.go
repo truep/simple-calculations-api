@@ -32,10 +32,8 @@ func main() {
 		middleware.Recoverer,
 		middleware.Timeout(30*time.Second),
 	)
-
 	// ex.:http://localhost/api/add?a=1&b=15
 	r.Route("/api", func(r chi.Router) {
-		// r.With()
 		r.Get("/add", handler.Add)
 		r.Get("/sub", handler.Sub)
 		r.Get("/mul", handler.Mul)
