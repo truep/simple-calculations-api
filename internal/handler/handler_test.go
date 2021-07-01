@@ -1,6 +1,7 @@
 package handler
 
 import (
+	"log"
 	"net/http"
 	"net/http/httptest"
 	"testing"
@@ -168,6 +169,7 @@ func TestDiv(t *testing.T) {
 	}
 
 	for _, tt := range tests {
+		log.Println("Test with params: ", tt.params)
 		req, _ := http.NewRequest("GET", "/api/div", nil)
 		q := req.URL.Query()
 
